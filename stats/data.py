@@ -2,7 +2,11 @@ import os
 import glob
 import pandas as pd
 
-game_files = glob.glob(os.path.join(os.getcwd(), 'games', '*.EVE'))
+#fake lösung
+game_files = glob.glob(os.path.join(os.getcwd().replace('stats', 'games'), '*.EVE'))
+#git build
+#game_files = glob.glob(os.path.join(os.getcwd(), 'games', '*.EVE'))
+
 game_files.sort()
 
 
@@ -25,4 +29,3 @@ games = games.fillna(' ')
 games.loc[:, 'type'] = pd.Categorical(games.loc[:, 'type'])
 
 print(games.head())
-
