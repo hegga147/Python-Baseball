@@ -2,13 +2,8 @@ import os
 import glob
 import pandas as pd
 
-#fake lösung
-game_files = glob.glob(os.path.join(os.getcwd().replace('stats', 'games'), '*.EVE'))
-#git build
-#game_files = glob.glob(os.path.join(os.getcwd(), 'games', '*.EVE'))
-
+game_files = glob.glob(os.path.join(os.getcwd(), 'games', '*.EVE'))
 game_files.sort()
-
 
 game_frames = []
 for game_file in game_files:
